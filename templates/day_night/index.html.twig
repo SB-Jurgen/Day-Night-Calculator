@@ -3,6 +3,9 @@
 {% block body %}
     <h1>Insert Time Range</h1>
     <div id="form">
+        {% if error %}
+            <span class="error">{{ error }}</span>
+        {% endif %}
         <span class="bold">Accepted minutes are only 00, 15, 30 and 45</span>
 
         {{ form_start(form) }}

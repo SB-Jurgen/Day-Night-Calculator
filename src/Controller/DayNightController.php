@@ -18,8 +18,13 @@ class DayNightController extends AbstractController
     #[Route('/', name: 'index', methods: ['GET'])]
     public function index(Request $request): Response
     {
+        $error = null;
+        if (!empty($request->query->get('error'))) {
+            $error = $request->query->get('error');
+        }
         return $this->render('day_night/index.html.twig', [
             'form' => $this->createForm(Time::class),
+            'error' => $error,
         ]);
     }
 
@@ -43,6 +48,7 @@ class DayNightController extends AbstractController
 
         return $this->render('day_night/index.html.twig', [
             'form' => $form,
+            'error' => 'Form is not valid',
         ]);
     }
 
@@ -56,7 +62,7 @@ class DayNightController extends AbstractController
         $dayHours = $request->query->get('dayHours');
         $nightHours = $request->query->get('nightHours');
         if (!isset($dayHours, $nightHours) || '' === $dayHours || '' === $nightHours) {
-            return $this->redirectToRoute('index', ['error' => 'Missing input']);
+            return $this->redirectToRoute('index', ['error' => 'Please insert times first!']);
         }
 
         return $this->render('day_night/success.html.twig', [
