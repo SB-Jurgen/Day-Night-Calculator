@@ -38,8 +38,8 @@ class DayNightControllerTest extends WebTestCase
         $client = static::createClient();
         $client->request('GET', '/success');
         $client->followRedirect();
-        $this->assertStringContainsString('error=', $client->getHistory()->current()->getUri());
-        self::assertSelectorExists('.error');
+        self::assertResponseIsSuccessful();
+        self::assertSelectorExists('.flash');
     }
 
     public function testCalculateWithInvalidData(): void

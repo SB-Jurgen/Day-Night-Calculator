@@ -1,7 +1,7 @@
 <?php
 namespace App\Validator\Constraints;
 
-use DateTime;
+use DateTimeImmutable;
 use Symfony\Component\Validator\Constraint;
 use Symfony\Component\Validator\ConstraintValidator;
 
@@ -23,10 +23,10 @@ class TimeValidValidator extends ConstraintValidator
     }
 
     /**
-     * @param DateTime $time
+     * @param DateTimeImmutable $time
      * @return bool
      */
-    private function isValidTimeFormat(DateTime $time): bool
+    private function isValidTimeFormat(DateTimeImmutable $time): bool
     {
         [$hours, $minutes] = explode(':', $time->format('H:i'));
         return in_array($minutes, ['00', '15', '30', '45']);

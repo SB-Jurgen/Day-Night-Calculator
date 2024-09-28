@@ -21,7 +21,7 @@ class Time extends AbstractType
             ->add('start_time', TimeType::class,
                 [
                     'label' => 'Start time',
-                    'input'  => 'datetime',
+                    'input'  => 'datetime_immutable',
                     'widget' => 'single_text',
                     'model_timezone' => 'Europe/Tallinn',
                     'constraints' => [
@@ -31,7 +31,7 @@ class Time extends AbstractType
             ->add('end_time', TimeType::class,
                 [
                     'label' => 'End time',
-                    'input'  => 'datetime',
+                    'input'  => 'datetime_immutable',
                     'widget' => 'single_text',
                     'model_timezone' => 'Europe/Tallinn',
                     'constraints' => [

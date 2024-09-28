@@ -126,3 +126,23 @@ button[type="submit"]:hover {
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
+
+#flashMessages {
+    width: 100%;
+    z-index: 1000;
+}
+
+.flash {
+    background-color: #ffcc00;
+    color: #333;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #e6b800;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flash + .flash {
+    margin-top: 5px;
+}

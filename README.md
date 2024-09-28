@@ -16,4 +16,4 @@ cd Day-Night-Calculator
 composer install
 symfony serve
 ```
-
+http://localhost:8000
