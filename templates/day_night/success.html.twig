@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Success</h1>
+    <div id="success-message">
+        <div class="message">
+            <span class="bold">Day hours:</span>
+            <span class="hours">{{ day_hours }}h</span>
+        </div>
+        <div class="message">
+            <span class="bold">Night hours:</span>
+            <span class="hours">{{ night_hours }}h</span>
+        </div>
+    </div>
+    <div class="back-link">
+        <a href="{{ path('index') }}" class="button">Back</a>
+    </div>
+{% endblock %}

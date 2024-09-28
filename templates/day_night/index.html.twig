@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Insert Time Range</h1>
+    <div id="form">
+        <span class="bold">Accepted minutes are only 00, 15, 30 and 45</span>
+
+        {{ form_start(form) }}
+        <div class="input">
+            <span>Start Time:</span>
+            {{ form_widget(form.start_time) }}
+        </div>
+        {% if form_errors(form.start_time) %}
+            <div class="error">
+                {{ form_errors(form.start_time) }}
+            </div>
+        {% endif %}
+        <div class="input">
+            <span>End Time:</span>
+            {{ form_widget(form.end_time) }}
+        </div>
+        {% if form_errors(form.end_time) %}
+            <div class="error">
+                {{ form_errors(form.end_time) }}
+            </div>
+        {% endif %}
+        {{ form_row(form.submit) }}
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

@@ -1,3 +1,128 @@
 body {
-    background-color: skyblue;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 28px;
+    text-align: center;
+    margin-top: 30px;
+    color: #333;
+}
+
+#form {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.input span {
+    font-weight: bold;
+    margin-right: 20px;
+    color: #555;
+    flex: 1;
+    max-width: 110px;
+}
+
+.input input {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+    flex: 3;
+}
+
+.input input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.error {
+    color: #e74c3c;
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.bold {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #888;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+#success-message {
+    max-width: 600px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.message span.bold {
+    font-weight: bold;
+    color: #555;
+    flex: 1;
+    max-width: 150px;
+    margin-bottom: unset;
+}
+
+.message span.hours {
+    flex: 3;
+    font-size: 16px;
+    padding: 10px 0;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
 }
